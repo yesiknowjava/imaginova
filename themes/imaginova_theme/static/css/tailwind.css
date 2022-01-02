@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "futura-pt-3";
+    src: url(../font/FuturaPTBook.otf);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
