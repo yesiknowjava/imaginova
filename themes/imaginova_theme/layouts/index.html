@@ -33,69 +33,9 @@
     <article class="container py-5 font-futurapt">
         <h3 class="text-primary text-xl text-center">Latest Articles</h3>
         <section class="flex flex-wrap">
-            <section class="md:w-1/3 p-10 text-success">
-                <img src="./img/1.png" alt="">
-                <h2 class="mt-2 text-3xl">5 Reasons Why You Are Seeing 1213 – The Meaning of 1213</h2>
-                <h6 class="text-sm title-font font-medium text-gray-400 py-3">May 21,2021</h6>
-                <a class="border-b-2 border-danger inline-flex items-center">Read More
-                </a>
-            </section>
-            <section class="md:w-1/3 p-10 text-success">
-                <img src="./img/Group3.png" alt="">
-                <h2 class="mt-2 text-3xl">5 Reasons Why You Are Seeing 1213 – The Meaning of 1213</h2>
-                <h6 class="text-sm title-font font-medium text-gray-400 py-3">May 21,2021</h6>
-                <a class="border-b-2 border-danger inline-flex items-center">Read More
-                </a>
-            </section>
-            <section class="md:w-1/3 p-10 text-success">
-                <img src="./img/Group7.png" alt="">
-                <h2 class="mt-2 text-3xl">5 Reasons Why You Are Seeing 1213 – The Meaning of 1213</h2>
-                <h6 class="text-sm title-font font-medium text-gray-400 py-3">May 21,2021</h6>
-                <a class="border-b-2 border-danger inline-flex items-center">Read More
-                </a>
-            </section>
-            <section class="md:w-1/3 p-10 text-success">
-                <img src="./img/Group2.png" alt="">
-                <h2 class="mt-2 text-3xl">5 Reasons Why You Are Seeing 1213 – The Meaning of 1213</h2>
-                <h6 class="text-sm title-font font-medium text-gray-400 py-3">May 21,2021</h6>
-                <a class="border-b-2 border-danger inline-flex items-center">Read More
-                </a>
-            </section>
-            <section class="md:w-1/3 p-10 text-success">
-                <img src="./img/1.png" alt="">
-                <h2 class="mt-2 text-3xl">5 Reasons Why You Are Seeing 1213 – The Meaning of 1213</h2>
-                <h6 class="text-sm title-font font-medium text-gray-400 py-3">May 21,2021</h6>
-                <a class="border-b-2 border-danger inline-flex items-center">Read More
-                </a>
-            </section>
-            <section class="md:w-1/3 p-10 text-success">
-                <img src="./img/Group3.png" alt="">
-                <h2 class="mt-2 text-3xl">5 Reasons Why You Are Seeing 1213 – The Meaning of 1213</h2>
-                <h6 class="text-sm title-font font-medium text-gray-400 py-3">May 21,2021</h6>
-                <a class="border-b-2 border-danger inline-flex items-center">Read More
-                </a>
-            </section>
-            <section class="md:w-1/3 p-10 text-success">
-                <img src="./img/Group2.png" alt="">
-                <h2 class="mt-2 text-3xl">5 Reasons Why You Are Seeing 1213 – The Meaning of 1213</h2>
-                <h6 class="text-sm title-font font-medium text-gray-400 py-3">May 21,2021</h6>
-                <a class="border-b-2 border-danger inline-flex items-center">Read More
-                </a>
-            </section>
-            <section class="md:w-1/3 p-10 text-success">
-                <img src="./img/1.png" alt="">
-                <h2 class="mt-2 text-3xl">5 Reasons Why You Are Seeing 1213 – The Meaning of 1213</h2>
-                <h6 class="text-sm title-font font-medium text-gray-400 py-3">May 21,2021</h6>
-                <a class="border-b-2 border-danger inline-flex items-center">Read More
-                </a>
-            </section>
-            <section class="md:w-1/3 p-10 text-success">
-                <img src="./img/Group3.png" alt="">
-                <h2 class="mt-2 text-3xl">5 Reasons Why You Are Seeing 1213 – The Meaning of 1213</h2>
-                <h6 class="text-sm title-font font-medium text-gray-400 py-3">May 21,2021</h6>
-                <a class="border-b-2 border-danger inline-flex items-center">Read More
-                </a>
-            </section>
+            {{ range where .Paginator.Pages "Section" "posts" }}
+                {{ partial "posts.html" . }}
+            {{ end }}
         </section>
     </article>
     <!-- article area end -->
