@@ -9,13 +9,13 @@
             <li><i class="fab fa-pinterest"></i></li>
         </ul>
         <!-- logo -->
-        <a href="#home">
+        <a href="{{ .Site.BaseURL }}">
             <img class="h-24" src="./img/Imaginova-Logo 1.png" alt="">
         </a>
         <!-- navigation -->
         <ul class="flex text-xl space-x-5 ">
-            <li>Home</li>
-            <li>Privacy Policy</li>
+            <li><a href="{{ .Site.BaseURL }}">Home</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
             <li>Book A Section</li>
         </ul>
     </nav>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body class="font-futurapt">
+    <header class="container h-32 relative">
+        <span class="absolute right-0 top-2/4 w-1/8">
+            <a href="/"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg></a>
+        </span>
+    </header>
+    <section class="container pr-60">
+        <h1 class="text-dark font-bold text-7xl relative">Hello.</h1>
+        <p class="text-dark text-3xl py-5">Searching answers for your numerology questions?
+            <br> Send your questions, so Avi Silver will get back to you shortly!</p>
+        <form class="flex flex-wrap">
+            <label class="block mt-6 w-47 mr-auto">
+                <span class="block text-sm font-medium text-gray-700">First Name</span>
+                <input type="text" value="tbone" disabled class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
+      focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+      disabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none
+      invalid:border-pink-500 invalid:text-pink-600
+      focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+    " />
+            </label>
+            <label class="block mt-6 w-47 ml-auto">
+                <span class="block text-sm font-medium text-gray-700">Last Name</span>
+                <input type="text" value="tbone" disabled class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
+      focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+      disabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none
+      invalid:border-pink-500 invalid:text-pink-600
+      focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+    " />
+            </label>
+            <label class="block mt-6 w-full">
+                <span class="block text-sm font-medium text-gray-700">Email</span>
+                <input type="text" value="tbone" disabled class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
+      focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+      disabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none
+      invalid:border-pink-500 invalid:text-pink-600
+      focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+    " />
+            </label>
+            <label class="block mt-6 w-full">
+                <span class="block text-sm font-medium text-gray-700">What Type of Appoitment Yould You Like to
+                    Book?*</span>
+                <input type="text" value="tbone" disabled class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
+      focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+      disabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none
+      invalid:border-pink-500 invalid:text-pink-600
+      focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+    " />
+            </label>
+            <label class="block mt-6 w-full">
+                <span class="block text-sm font-medium text-gray-700">Preferred Day of the Week for Appointment</span>
+                <section class="flex">
+                    <section class="w-1/6 flex flex-col">
+                        <label>
+                            <input type="checkbox" class="default:ring-2 ..." />
+                            <span>Monday</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="default:ring-2 ..." />
+                            <span>Tuesday</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="default:ring-2 ..." />
+                            <span>Wednesday</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="default:ring-2 ..." />
+                            <span>Thursday</span>
+                        </label>
+                    </section>
+                    <section class="w-1/5 flex flex-col">
+                        <label>
+                            <input type="checkbox" class="default:ring-2 ..." />
+                            <span>Friday</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="default:ring-2 ..." />
+                            <span>Saturday</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="default:ring-2 ..." />
+                            <span>Sunday</span>
+                        </label>
+                    </section>
+                </section>
+
+            </label>
+            <label class="block mt-6 w-full">
+                <span class="block text-sm font-medium text-gray-700">Comment or message</span>
+                <input type="text" value="tbone" disabled class="mt-1 block w-full h-32 px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
+      focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+      disabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none
+      invalid:border-pink-500 invalid:text-pink-600
+      focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+    " />
+            </label>
+            <button
+                class="flex items-center w-full justify-center bg-danger text-primary relative mt-4 mr-2 px-5 py-2 rounded">
+                <span class="pr-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg></span><span>Send Us</span></button>
+        </form>
+    </section>
+    <footer class="container mt-6 mb-40">
+        <p>We're committed to your privacy. For more information, check out our Privacy Policy.</p>
+    </footer>
+</body>
+
+</html>

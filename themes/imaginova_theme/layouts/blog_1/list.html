@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body>
+    <!-- header area start -->
+    {{ partial "header.html" . }}
+    <!-- header area end -->
+
+
+    <!-- article area start -->
+    <article class="container flex py-5 font-futurapt">
+        <section class="w-3/4">
+            <h1 class="text-dark text-6xl pl-8">Blog</h1>
+            <section class="flex flex-wrap">
+                
+                {{ range where .Paginator.Pages "Section" "blog" }}
+                    {{ partial "posts.html" . }}
+                {{ end }}
+            </section>
+            <section class="ml-10 my-28 flex relative">
+                <button class="flex bg-lightviolet bg-opacity-60 text-primary p-3 rounded mr-5">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+                        </svg>
+                    </span>
+                    <span class="text-primary font-semibold"> Previous Page</span>
+
+                </button>
+                <button class="flex bg-danger opacity-70 p-3 rounded mr-5">
+                    <span class="text-primary font-semibold">Next Page </span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </span>
+                </button>
+                <section class="absolute flex items-center space-x-2 right-7 top-3">
+                    <span>Page </span>
+                    <span class="px-2 py-1 rounded-md border border-primary">1</span>
+                    <span>of 12 </span>
+                    <span class="px-2 py-1 rounded-md bg-danger"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg></span>
+                    <span class="px-2 py-1 rounded-md bg-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </span>
+                </section>
+            </section>
+        </section>
+        <section class="text-dark w-1/4">
+            <h3 class="text-2xl font-semibold">Search for Meaning</h3>
+            <p class="opacity-50">I am seeing a number everywhere.</p>
+            <label class="relative block mt-4">
+                <span class="absolute text-primary inset-y-0 right-4 flex items-center pl-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </span>
+                <input
+                    class="placeholder:italic text-black placeholder:text-primary block bg-white w-full border border-gray-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                    placeholder="Enter a number up to 9999" type="text" name="search" />
+            </label>
+            <section class="text-success">
+                <h3 class="text-2xl font-semibold my-3">Recent Posts</h3>
+                <p class="text-lg py-2 border-b border-gray-300 hover:text-highlight">3 Reasons Why You Are Seeing 813 –
+                    The Meaning of 813</p>
+                <p class="text-lg py-2 border-b border-gray-300 hover:text-highlight">3 Reasons Why You Are Seeing 813 –
+                    The Meaning of 813</p>
+                <p class="text-lg py-2 border-b border-gray-300 hover:text-highlight">3 Reasons Why You Are Seeing 813 –
+                    The Meaning of 813</p>
+                <p class="text-lg py-2 border-b border-gray-300 hover:text-highlight">3 Reasons Why You Are Seeing 813 –
+                    The Meaning of 813</p>
+                <p class="text-lg py-2 border-b border-gray-300 hover:text-highlight">3 Reasons Why You Are Seeing 813 –
+                    The Meaning of 813</p>
+            </section>
+            <section class="text-success">
+                <h3 class="text-2xl font-semibold my-3">Recent Posts</h3>
+                <p class="text-lg py-2 border-b border-gray-300 hover:text-highlight">3 Reasons Why You Are Seeing 813 –
+                    The Meaning of 813</p>
+                <p class="text-lg py-2 border-b border-gray-300 hover:text-highlight">3 Reasons Why You Are Seeing 813 –
+                    The Meaning of 813</p>
+                <p class="text-lg py-2 border-b border-gray-300 hover:text-highlight">3 Reasons Why You Are Seeing 813 –
+                    The Meaning of 813</p>
+                <p class="text-lg py-2 border-b border-gray-300 hover:text-highlight">3 Reasons Why You Are Seeing 813 –
+                    The Meaning of 813</p>
+                <p class="text-lg py-2 border-b border-gray-300 hover:text-highlight">3 Reasons Why You Are Seeing 813 –
+                    The Meaning of 813</p>
+            </section>
+        </section>
+
+    </article>
+    <!-- article area end -->
+
+    <!-- contact area start  -->
+    <section class="bg-main bg-cover bg-center bg-no-repeat py-24 px-72 text-white font-futurapt text-center"
+        style="background-image: url(./assets/img/Frame16.png);">
+        {{ partial "action.html" . }}
+    </section>
+    <!-- contact area end  -->
+
+
+    <!-- footer area start -->
+    {{ partial "footer.html" . }}
+    <!-- footer area end -->
+
+</body>
+
+</html>

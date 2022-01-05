@@ -1,0 +1,63 @@
+<style>
+    .pagination>li>a, .pagination>li>span { border-radius: 50% !important;margin: 0 5px;}
+    </style>
+    <!-- Code starts here -->
+    {{ $pag := $.Paginator }}
+    {{ if gt $pag.TotalPages 1 }}
+    {{ $.Scratch.Set "dot_rendered" false }}
+    
+
+    
+    <section class="flex items-center space-x-2 right-7 top-3">
+        {{ if and (ne $pag.PageNumber 1) (ne $pag.PageNumber 2) }}
+        <span class="px-2 py-1 rounded-md bg-danger"><a href="{{ $pag.First.URL }}"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg></a></span>
+
+        
+        {{ end }}
+        {{ if $pag.HasPrev  }}
+            <span class="px-2 py-1 rounded-md bg-danger"><a href="{{ $pag.Prev.URL }}"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg></a></span>
+        {{ end }}
+        {{ range $pag.Pagers }}
+            {{ if eq . $pag }} <!-- Current Page -->
+            <span class="px-2 py-1 rounded-md border border-primary"><a href="{{ .URL }}" class="page-link">{{ .PageNumber }}</a></span>
+            {{ else if and (ge .PageNumber (sub $pag.PageNumber 2)) (le .PageNumber (add $pag.PageNumber 2)) }}
+            {{ $.Scratch.Set "dot_rendered" false }} <!-- Render prev 2 page and next 2 pages -->
+            <span class="px-2 py-1 rounded-md border border-primary"><a href="{{ .URL }}" class="page-link">{{ .PageNumber }}</a></span>
+            {{ else if eq ($.Scratch.Get "dot_rendered") false }} <!-- render skip pages -->
+            {{ $.Scratch.Set "dot_rendered" true }}
+            <span class="px-2 py-1 rounded-md border border-primary">...</span>
+            {{ end }}
+        {{ end }}
+        <span>of {{ $pag.TotalPages }} </span>
+        {{ if $pag.HasNext }}
+        <span class="px-2 py-1 rounded-md bg-danger">
+            <a href="{{ $pag.Next.URL }}">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </a>
+        </span>
+        {{ end }}
+        
+        {{ if and (ne $pag.PageNumber $pag.TotalPages) ((ne $pag.PageNumber (sub $pag.TotalPages 1))) }}
+        <span class="px-2 py-1 rounded-md bg-danger">
+            <a href="{{ $pag.Last.URL }}">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </a>
+        </span>
+        
+        {{ end }}
+    </section>
+    
+    {{ end }}
+    <!-- Code ends here -->
