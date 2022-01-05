@@ -50,8 +50,10 @@
     <!-- article area start -->
     <article class="container py-5 font-futurapt">
         <section class="flex flex-wrap">
-            {{ range where .Paginator.Pages "Section" "blog" | after 3}}
-                {{ partial "posts.html" . }}
+            {{range $index, $element := where .Paginator.Pages "Section" "blog" }}
+                {{ if gt $index 2 }}
+                    {{ partial "posts.html" . }}
+                {{ end }}
             {{ end }}
         </section>
     </article>
