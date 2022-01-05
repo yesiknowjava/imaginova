@@ -2,4 +2,4 @@ baseURL = 'https://objective-sinoussi-c5a56a.netlify.app/'
 languageCode = 'en-us'
 title = 'Imaginova'
 theme = "imaginova_theme"
-paginate = "2"
+paginate = "3"
